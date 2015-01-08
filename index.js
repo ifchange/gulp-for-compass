@@ -53,8 +53,8 @@ module.exports = function(opt) {
             }
             else {
                 // excute callback
-                var relativePath = path.relative( path.join( process.cwd(), opt.sassDir ), file.path );
-                var pathToCss = path.resolve( path.join( process.cwd(), opt.cssDir ), relativePath );
+                var relativePath = path.relative( path.join( opt.basePath || process.css0wd(), opt.sassDir ), file.path );
+                var pathToCss = path.resolve( path.join( opt.basePath || process.cwd(), opt.cssDir ), relativePath );
                 pathToCss = gutil.replaceExtension( pathToCss, '.css');
                 var contents = fs.readFileSync(pathToCss);
 

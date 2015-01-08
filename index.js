@@ -43,7 +43,7 @@ module.exports = function(opt) {
                 // `compass compile` exits with 1 and outputs "Nothing to compile"
                 // on stderr when it has nothing to compile.
                 // https://github.com/chriseppstein/compass/issues/993
-                else if (code === 1 && !/Nothing to compile|Compass can't find any Sass files to compile/g.test(result.stderr)) {
+                else if (result.stderr && /Nothing to compile|Compass can't find any Sass files to compile/g.test(result.stderr)) {
                     gutil.log( PLUGIN_NAME, 'Nothing to compile' );
                     return cb( null );
                 }

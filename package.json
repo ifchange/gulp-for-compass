@@ -23,7 +23,9 @@
   },
   "homepage": "https://github.com/neekey/gulp-for-compass",
   "dependencies": {
-    "compass-compiler": "0.0.1"
+    "compass-compiler": "0.0.1",
+    "gulp-util": "^3.0.2",
+    "through2": "^0.6.3"
   },
   "devDependencies": {
     "gulp": "^3.8.7"
